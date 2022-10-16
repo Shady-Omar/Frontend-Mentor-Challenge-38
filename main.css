@@ -496,6 +496,10 @@ footer {
 }
 
 @media (max-width: 767px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
     main {
         max-width: 100%;
         min-width: 375px;
