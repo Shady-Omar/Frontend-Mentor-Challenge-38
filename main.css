@@ -1,0 +1,915 @@
+body {
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden; 
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-position: 20% 50%, right;
+    background-size: 190%, cover;
+    height: 75vh;
+    border-bottom-left-radius: 5rem;
+}
+
+.top-content {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.top-content .nav-bar {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-content .nav-bar .links {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.top-content .nav-bar .links #prod {
+    position: relative;
+    cursor: pointer;
+}
+
+.product {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    color: hsl(237, 17%, 21%);
+    padding: 5px;
+    display: flex;
+    top: 5rem;
+    min-width: 7.1rem;
+}
+
+.product ul {
+    list-style: none;
+    padding: 0;
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 14px;
+}
+
+.product ul li {
+    cursor: pointer;
+    line-height: 1.7em;
+}
+
+.product ul li:hover {
+    font-weight: 500;
+}
+
+.top-content .nav-bar .links #prod:after {
+    content: url(images/icon-arrow-light.svg);
+    position: absolute;
+    right: -1rem;
+    transition: 0.2s;
+}
+
+.top-content .nav-bar .links #prod:hover::after {
+    transform: rotate(180deg);
+}
+
+.top-content .nav-bar .links #comp {
+    position: relative;
+    cursor: pointer;
+}
+
+.comps {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    color: hsl(237, 17%, 21%);
+    padding: 5px;
+    display: flex;
+    top: 5rem;
+    min-width: 7.1rem;
+}
+
+.comps ul {
+    list-style: none;
+    padding: 0;
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 14px;
+}
+
+.comps ul li {
+    cursor: pointer;
+    line-height: 1.7em;
+}
+
+.comps ul li:hover {
+    font-weight: 500;
+}
+
+.top-content .nav-bar .links #comp:after {
+    content: url(images/icon-arrow-light.svg);
+    position: absolute;
+    right: -1rem;
+    transition: 0.2s;
+}
+
+.top-content .nav-bar .links #comp:hover::after {
+    transform: rotate(180deg);
+}
+
+.top-content .nav-bar .links #connect {
+    position: relative;
+    cursor: pointer;
+}
+
+.cons {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    color: hsl(237, 17%, 21%);
+    padding: 5px;
+    display: flex;
+    top: 5rem;
+    min-width: 7.1rem;
+}
+
+.cons ul {
+    list-style: none;
+    padding: 0;
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 14px;
+}
+
+.cons ul li {
+    cursor: pointer;
+    line-height: 1.7em;
+}
+
+.cons ul li:hover {
+    font-weight: 500;
+}
+
+.top-content .nav-bar .links #connect:after {
+    content: url(images/icon-arrow-light.svg);
+    position: absolute;
+    right: -1rem;
+    transition: 0.2s;
+}
+
+.top-content .nav-bar .links #connect:hover::after {
+    transform: rotate(180deg);
+}
+
+.top-content .nav-bar .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar .login #log {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-bar .login #sign {
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 2rem;
+    color: hsl(353, 100%, 62%);
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: 0.2s;
+}
+
+.nav-bar .login #sign:hover {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    color: white;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 75%;
+}
+
+.center .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
+
+.center .text h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.center .btn {
+    margin-top: 2rem;
+}
+
+.center .btn #learn {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.center .btn #learn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(353, 100%, 62%);
+}
+
+.center .btn #start {
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 2rem;
+    color: hsl(353, 100%, 62%);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: 0.2s;
+}
+
+.center .btn #start:hover {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    color: white;
+    border: 2px solid transparent;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mob {
+    display: none;
+}
+
+.one {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.one h2 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    color: hsl(208, 49%, 24%);
+    font-size: 2em;
+}
+
+.one .content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+}
+
+.one .content .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.one .content .text h3 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    color: hsl(208, 49%, 24%);
+    font-size: 1.5em;
+}
+
+.one .content .text p {
+    font-family: 'Overpass', sans-serif;
+    color: hsl(237, 17%, 21%);
+    line-height: 1.5em;
+    width: 90%;
+}
+
+.one .content .image {
+    width: 50%;
+}
+
+.one .content .image img {
+    transform: translateX(1rem)
+}
+
+.two {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-repeat: no-repeat;
+    background-position: -70% 90%, left;
+    background-size: 80%, cover;
+    border-bottom-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    height: 60vh;
+    margin: 10rem 0;
+}
+
+.two .content {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.two .content .image {
+    width: 50%;
+}
+
+.two .content .text {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+.two .content .text h2 {
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+} 
+
+.two .content .text p {
+    font-family: 'Overpass', sans-serif;
+    color: hsl(240, 2%, 79%);
+    line-height: 1.8em;
+    font-size: 14px;
+    width: 80%;
+}
+
+.three {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.three h2 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    color: hsl(208, 49%, 24%);
+    font-size: 2em;
+}
+
+.three .content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+}
+
+.three .content .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5rem;
+}
+
+.three .content .text h3 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    color: hsl(208, 49%, 24%);
+    font-size: 1.5em;
+}
+
+.three .content .text p {
+    font-family: 'Overpass', sans-serif;
+    color: hsl(237, 17%, 21%);
+    line-height: 1.5em;
+}
+
+.three .content .image {
+    width: 50%;
+}
+
+.three .content .image img {
+    transform: translateX(-26rem)
+}
+
+.hide {
+    display: none !important;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 5rem;
+}
+
+.foot {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.foot span {
+    color: white;
+    font-weight: 500;
+}
+
+.foot ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.foot ul li {
+    color: hsl(240, 2%, 79%);
+    font-weight: 400;
+    line-height: 2em;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.foot ul li:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    main {
+        max-width: 100%;
+        min-width: 375px;
+    }
+
+    .mob {
+        display: block;
+    }
+
+    .desk {
+        display: none !important;
+    }
+
+    header {
+        background-image: url(images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-position: 35% 35%, center;
+        background-size: 335%, cover;
+    }
+
+    .top-content {
+        margin-top: 3rem;
+        position: relative;
+    }
+
+    .center {
+        flex-basis: 70%;
+    }
+
+    .center .text h1 {
+        font-size: 2.3em;
+        width: 85%;
+    }
+
+    .center .text p {
+        font-size: 1.3em;
+        width: 85%;
+    }
+
+    .center .btn {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .center .btn #start {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        width: 50%;
+    }
+
+    .center .btn #learn {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        width: 50%;
+    }
+
+    .one {
+        margin: 5rem 0;
+    }
+
+    .one .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: 1%;
+    }
+
+    .one h2 {
+        font-size: 1.8em;
+    }
+
+    .one .content .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .one .content .image img {
+        transform: translateX(0rem);
+    }
+
+    .one .content .text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .one .content .text h3 {
+        font-size: 2em;
+    }
+
+    .one .content .text p {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .two {
+        background-image: url(images/bg-pattern-circles.svg), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+        background-position: 50% -6700%;
+        background-size: 165%, cover;
+        height: 80vh;
+    }
+
+    .two .content {
+        flex-direction: column;
+    }
+
+    .two .content .image {
+        width: 100%;
+    }
+
+    .two .content .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25vh;
+    }
+
+    .two .content .image img {
+        width: 125%;
+        transform: translateY(-5rem);
+    }
+
+    .two .content .text {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0rem;
+    }
+
+    .two .content .text h2 {
+        font-size: 2.5em;
+        margin-bottom: 5px;
+    }
+
+    .two .content .text p {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .three {
+        margin-bottom: 5rem;
+        margin-top: 0;
+    }
+
+    .three .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 1%;
+    }
+
+    .three .content .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .three .content .image img {
+        transform: translateX(0rem);
+    }
+
+    .three .content .text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: 0rem;
+    }
+
+    .three .content .text h3 {
+        font-size: 2em;
+    }
+
+    .three .content .text p {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .foot {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foot img {
+        margin-bottom: 5rem
+    }
+
+    .foot ul {
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    .menu-links {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 65vh;
+        box-shadow: rgb(0 0 0 / 50%) 0px 8px 24px 2px;
+        justify-content: space-around;
+    }
+
+    .menu-links .content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.2em;
+        color: hsl(208, 49%, 24%);
+        font-weight: 600;
+    }
+
+    .menu-links .content a {
+        margin-bottom: 1rem;
+    }
+
+    .menu-links .content #prod-mob {
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .prod-mob {
+        border-radius: 10px;
+        background-color: hsl(240deg 2% 79% / 40%);
+        color: hsl(237, 23%, 32%);
+        padding: 5px;
+        display: flex;
+        top: 5rem;
+        min-width: 7.1rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    
+    .prod-mob ul {
+        list-style: none;
+        padding: 0;
+        font-weight: 600;
+        margin: 1rem;
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Overpass', sans-serif;
+    }
+    
+    .prod-mob ul li {
+        cursor: pointer;
+        line-height: 2em;
+    }
+    
+    .menu-links .content #prod-mob:after {
+        content: url(images/icon-arrow-dark.svg);
+        position: absolute;
+        right: -1rem;
+        transition: 0.2s;
+    }
+
+    .menu-links .content #comp-mob {
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .comp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .comp-mob {
+        border-radius: 10px;
+        background-color: hsl(240deg 2% 79% / 40%);
+        color: hsl(237, 23%, 32%);
+        padding: 5px;
+        display: flex;
+        top: 5rem;
+        min-width: 7.1rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    
+    .comp-mob ul {
+        list-style: none;
+        padding: 0;
+        font-weight: 600;
+        margin: 1rem;
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Overpass', sans-serif;
+    }
+    
+    .comp-mob ul li {
+        cursor: pointer;
+        line-height: 2em;
+    }
+    
+    .menu-links .content #comp-mob:after {
+        content: url(images/icon-arrow-dark.svg);
+        position: absolute;
+        right: -1rem;
+        transition: 0.2s;
+    }
+
+    .menu-links .content #connect-mob {
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .connect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .connect-mob {
+        border-radius: 10px;
+        background-color: hsl(240deg 2% 79% / 40%);
+        color: hsl(237, 23%, 32%);
+        padding: 5px;
+        display: flex;
+        top: 5rem;
+        min-width: 7.1rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    
+    .connect-mob ul {
+        list-style: none;
+        padding: 0;
+        font-weight: 600;
+        margin: 1rem;
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Overpass', sans-serif;
+    }
+    
+    .connect-mob ul li {
+        cursor: pointer;
+        line-height: 2em;
+    }
+    
+    .menu-links .content #connect-mob:after {
+        content: url(images/icon-arrow-dark.svg);
+        position: absolute;
+        right: -1rem;
+        transition: 0.2s;
+    }
+
+    .menu-links .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 8rem;
+        border-top: 1px solid hsl(240, 2%, 79%);
+        padding-top: 1rem;
+        width: 80%;
+        align-items: center;
+    }
+
+    .menu-links .login #signs {
+        border: none;
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        border-radius: 2rem;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0.8rem 2.5rem;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    
+    .menu-links .login #signs:hover {
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(13, 100%, 72%));
+    }
+
+    .menu-links .login #logs {
+        background-color: hsl(0, 0%, 100%);
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        border: none;
+        border-radius: 2rem;
+        color: hsl(208, 49%, 24%);
+        padding: 0.8rem 2rem;
+        cursor: pointer;
+        margin: 0 1rem;
+        transition: 0.2s;
+    }
+}
